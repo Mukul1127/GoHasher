@@ -51,7 +51,7 @@ var CalculateCmd = &cobra.Command{
 }
 
 func init() {
-	CalculateCmd.Flags().StringSliceP("algorithms", "a", []string{}, "Comma-separated list of hash algorithms to use (e.g., sha256, sha1, md5)")
+	CalculateCmd.Flags().StringSliceP("algorithms", "a", []string{}, "Comma-separated list of hash algorithms to use (e.g., md5, sha1, sha2_256)")
 	err := CalculateCmd.MarkFlagRequired("algorithms")
 	if err != nil {
 		logger.Get().Fatalf("Failed to mark 'algorithms' flag as required: %s", err)

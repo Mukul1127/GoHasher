@@ -11,7 +11,7 @@ import (
 var RootCmd = &cobra.Command{
 	Use:   "GoHasher",
 	Short: "",
-	Long:  "A simple, quick hasher built in Golang!",
+	Long:  "A simple, quick file hasher built in Golang!",
 }
 
 func Execute() {
@@ -21,6 +21,6 @@ func Execute() {
 	RootCmd.AddCommand(list.ListCmd)
 	err := RootCmd.Execute()
 	if err != nil {
-		logger.Get().Fatal("Failed to initialize Cobra: %s", err)
+		logger.Get().Fatalf("Failed to initialize Cobra: %s", err)
 	}
 }

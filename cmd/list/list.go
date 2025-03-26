@@ -14,7 +14,7 @@ var ListCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		logger.Get().Info("Available hashing algorithms")
 		for _, algorithm := range hashing.GetHashFunctionNames() {
-			logger.Get().Infof("- %s", algorithm)
+			logger.Get().Infof(" - %s", algorithm)
 		}
 	},
 }
