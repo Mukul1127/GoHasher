@@ -27,14 +27,6 @@ func Initialize() {
 	logger = log.Sugar()
 }
 
-func Destroy() {
-	err := logger.Sync()
-	if err != nil {
-		fmt.Printf("Error destroying logger: %s\n", err)
-		os.Exit(1)
-	}
-}
-
 func Get() *zap.SugaredLogger {
 	return logger
 }

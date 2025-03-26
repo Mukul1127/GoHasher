@@ -23,6 +23,4 @@ func Execute() {
 	if err != nil {
 		logger.Get().Fatal("Failed to initialize Cobra: %s", err)
 	}
-
-	logger.Destroy()
 }
